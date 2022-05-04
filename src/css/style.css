@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-in-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hamburger {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  background-color: #222;
+  height: 0.125rem;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.open {
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(0.625rem);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(-0.625em);
+}

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    /> -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>2022-kwiecien-tailwind</title>
+  </head>
+  <body>
+    <header
+      id="navbar"
+      class="bg-white py-9 lg:py-12 fixed w-full z-10 transition-all duration-300"
+    >
+      <div class="container mx-auto px-3">
+        <div
+          class="flex flex-col lg:flex-row gap-3 items-center lg:justify-between"
+        >
+          <div class="flex flex-row justify-between w-full lg:w-auto">
+            <a href="#">
+              <h1 class="text-lg font-bold">
+                <span class="text-green">Grzegorz</span>
+                <span class="text-gray">Pokorski</span>
+              </h1>
+            </a>
+            <button
+              id="menu-opener"
+              class="flex flex-col justify-around lg:hidden hamburger"
+              aria-label="otwórz nawigacje"
+            >
+              <span class="sr-only">Otwórz menu</span>
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
+          <nav id="menu" class="w-full lg:w-auto pt-8 lg:pt-0 lg:inline hidden">
+            <ul class="flex flex-col lg:flex-row gap-6 lg:items-center">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-gray-800 transition-all"
+                  >O mnie</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-gray-800 transition-all"
+                  >Realizacje</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-gray-800 transition-all"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-gray-800 transition-all"
+                  >Oferta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block bg-green hover:bg-greenHover text-white px-6 py-3 transition-all"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-36">
+      <section class="bg-white py-12">
+        <div
+          class="container mx-auto px-3 flex flex-col md:flex-row items-center gap-3"
+        >
+          <header
+            class="md:w-1/2 flex flex-col gap-3 text-center md:text-left items-center md:items-start"
+          >
+            <h2
+              class="text-3xl lg:text-4xl xl:text-[2.5rem] xl:leading-[1.2] font-bold text-customGray"
+            >
+              Projekuję oraz tworzę nowoczesne strony internetowe
+            </h2>
+            <p>
+              Zachęcam do zapoznania się z moją ofertą oraz do kontaktu. Zróbmy
+              razem coś niesamowitego!
+            </p>
+            <div
+              class="flex flex-row flex-wrap gap-2 justify-center md:justify-start"
+            >
+              <a
+                href="#"
+                class="bg-green hover:bg-greenHover text-white px-6 py-3 transition-all"
+                >Zobacz ofertę</a
+              >
+              <a
+                href="#"
+                class="bg-transparent hover:bg-greenHover text-green hover:text-white border-2 border-green px-6 py-3 transition-all"
+                >Skontaktuj się ze mną</a
+              >
+            </div>
+          </header>
+          <picture class="w-full md:w-1/2">
+            <source
+              media="(min-width: 576px)"
+              srcset="./dist/img/hero-768w.webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./dist/img/hero-992w.webp"
+            />
+            <source
+              media="(min-width: 992px)"
+              srcset="./dist/img/hero-1200w.webp"
+            />
+            <source
+              media="(min-width: 1200px)"
+              srcset="./dist/img/hero-1920w.webp"
+            />
+            <img
+              width="558"
+              height="500"
+              src="./dist/img/hero-576w.webp"
+              alt="zadowoleni klienci"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="bg-whiteGreen py-12 md:py-24">
+        <div class="container px-3 mx-auto">
+          <header
+            class="text-center w-full md:w-4/6 mx-auto flex flex-col gap-4"
+          >
+            <span class="text-green uppercase font-bold">Oferta</span>
+            <h2 class="font-bold text-3xl md:text-4xl text-customGray">
+              W czym się specjalizuję?
+            </h2>
+            <p>
+              Gdyby zachodziła konieczność przeprowadzenia zabiegu na otwartym
+              sercu, powierzyłbyś swoje zdrowie i życie mechanikowi? Między
+              innymi dlatego warto korzystać z usług specjalisty.
+            </p>
+          </header>
+          <ul
+            class="flex flex-col lg:grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12 md:mt-24"
+          >
+            <li
+              class="w-full bg-white border-2 border-greenLight drop-shadow-xl"
+            >
+              <article class="p-8">
+                <header class="flex flex-row gap-3 items-center">
+                  <span
+                    class="relative bg-green inline-block min-w-[4rem] min-h-[4rem]"
+                  >
+                    <span
+                      class="fa fa-desktop font-bold text-white text-2xl icon-in-box"
+                      aria-hidden="true"
+                    ></span>
+                  </span>
+                  <a href="#" class="hover:underline">
+                    <h3 class="font-bold text-lg">
+                      Kompleksowe tworzenie stron internetowych
+                    </h3>
+                  </a>
+                </header>
+                <p class="mt-6">
+                  Oferuję wykonanie strony internetowej od A do Z zaczynając od
+                  projektu graficznego po wdrożenie go do systemu zażądania
+                  treścią WordPress.
+                </p>
+              </article>
+            </li>
+            <li
+              class="w-full bg-white border-2 border-greenLight drop-shadow-xl"
+            >
+              <article class="p-8">
+                <header class="flex flex-row gap-3 items-center">
+                  <span
+                    class="relative bg-green inline-block min-w-[4rem] min-h-[4rem]"
+                  >
+                    <span
+                      class="fa fa-code font-bold text-white text-2xl icon-in-box"
+                      aria-hidden="true"
+                    ></span>
+                  </span>
+                  <a href="#" class="hover:underline">
+                    <h3 class="font-bold text-lg">
+                      Kodowanie szablonów graficznych do HTML
+                    </h3>
+                  </a>
+                </header>
+                <p class="mt-6">
+                  Potrzebujesz profesjonalnie zakodowanego szablonu? A może nie
+                  potrzebujesz często edytować treści na swojej witrynie?
+                  Chętnie zakoduję go dla Ciebie.
+                </p>
+              </article>
+            </li>
+            <li
+              class="w-full bg-white border-2 border-greenLight drop-shadow-xl"
+            >
+              <article class="p-8">
+                <header class="flex flex-row gap-3 items-center">
+                  <span
+                    class="relative bg-green inline-block min-w-[4rem] min-h-[4rem]"
+                  >
+                    <span
+                      class="fa fa-images font-bold text-white text-2xl icon-in-box"
+                      aria-hidden="true"
+                    ></span>
+                  </span>
+                  <a href="#" class="hover:underline">
+                    <h3 class="font-bold text-lg">
+                      Kompleksowe tworzenie stron internetowych
+                    </h3>
+                  </a>
+                </header>
+                <p class="mt-6">
+                  Chodzi Ci po głowie nowy projekt? A może nudzi Cię twoja stara
+                  strona internetowa i chcesz ją dostosować do panujących
+                  trendów? Zapraszam, zaprojektuję Twoją nową stronę.
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="py-12 md:py-24 bg-white">
+        <div
+          class="container px-3 mx-auto flex flex-col md:flex-row-reverse gap-3 items-center"
+        >
+          <div class="w-full md:w-1/2">
+            <header class="text-left flex flex-col gap-4">
+              <span class="text-green uppercase font-bold"
+                >Strony internetowe</span
+              >
+              <h2 class="font-bold text-3xl md:text-4xl text-customGray">
+                Programowanie stron internetowych
+              </h2>
+            </header>
+            <div class="prose mt-6">
+              <p>
+                Wykonuję 'szyte na miarę’ strony internetowe dostosowane do
+                konkretnej grupy docelowej oraz pomagające realizować założone
+                cele.
+              </p>
+              <p>
+                Moją specjalnością są strony dla małych oraz średnich firm
+                oparte na autorskim motywie.
+                <strong
+                  >Każda strona internetowa przygotowywana jest
+                  indywidualnie</strong
+                >, aby zapewnić jak najlepsze wrażenia z użytkowania zarówno dla
+                odbiorców jak i dla administratorów.
+              </p>
+              <p>
+                Rozszerz zasięg swojej firmy dzięki mojej profesjonalnie
+                przygotowanej stronie internetowej.
+              </p>
+            </div>
+            <footer class="mt-6">
+              <a
+                href="#"
+                class="inline-block bg-green hover:bg-greenHover text-white px-6 py-3 transition-all"
+                >Dowiedz się więcej</a
+              >
+            </footer>
+          </div>
+          <picture class="w-full w-full md:w-1/2">
+            <source
+              media="(min-width: 576px)"
+              srcset="./dist/img/pages-768w.webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./dist/img/pages-992w.webp"
+            />
+            <source
+              media="(min-width: 992px)"
+              srcset="./dist/img/pages-1200w.webp"
+            />
+            <source
+              media="(min-width: 1200px)"
+              srcset="./dist/img/pages-1920w.webp"
+            />
+            <img
+              width="558"
+              height="500"
+              src="./dist/img/pages-576w.webp"
+              alt="człowiek pracuje przy biurku"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="py-12 md:py-24 bg-whiteGreen">
+        <div
+          class="container px-3 mx-auto flex flex-col md:flex-row gap-3 items-center"
+        >
+          <div class="w-full md:w-1/2">
+            <header class="text-left flex flex-col gap-4">
+              <span class="text-green uppercase font-bold"
+                >KODOWANIE SZABLONÓW</span
+              >
+              <h2 class="font-bold text-3xl md:text-4xl text-customGray">
+                Kodowanie gotowych projektów graficznych do HTML
+              </h2>
+            </header>
+            <div class="prose mt-6">
+              <p>
+                Jeśli poszukujesz programisty do zakodowania Twojego szablonu
+                graficznego? Dobrze trafiłeś! Oferuję wysokiej jakości, wolne od
+                błędów i dostosowane do potrzeb usługę kodowania szablonów stron
+                internetowych. Wykorzystuje najnowsze technologie, abyś mógł się
+                cieszyć, w pełni kompatybilną z najnowszymi przeglądarkami,
+                stroną internetową.
+              </p>
+            </div>
+            <footer class="mt-6">
+              <a
+                href="#"
+                class="inline-block bg-green hover:bg-greenHover text-white px-6 py-3 transition-all"
+                >Dowiedz się więcej</a
+              >
+            </footer>
+          </div>
+          <picture class="w-full w-full md:w-1/2">
+            <source
+              media="(min-width: 576px)"
+              srcset="./dist/img/code-768w.webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./dist/img/code-992w.webp"
+            />
+            <source
+              media="(min-width: 992px)"
+              srcset="./dist/img/code-1200w.webp"
+            />
+            <source
+              media="(min-width: 1200px)"
+              srcset="./dist/img/code-1920w.webp"
+            />
+            <img
+              width="558"
+              height="500"
+              src="./dist/img/code-576w.webp"
+              alt="chłopak pracuje na sofie"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="py-12 md:py-24 bg-white">
+        <div
+          class="container px-3 mx-auto flex flex-col md:flex-row-reverse gap-3 items-center"
+        >
+          <div class="w-full md:w-1/2">
+            <header class="text-left flex flex-col gap-4">
+              <span class="text-green uppercase font-bold"
+                >Projektowanie graficzne</span
+              >
+              <h2 class="font-bold text-3xl md:text-4xl text-customGray">
+                Potrzebujesz projektu graficznego?
+              </h2>
+            </header>
+            <div class="prose mt-6">
+              <p>
+                Chodzi Ci po głowie nowy projekt? A może nudzi Cię wygląd twojej
+                strony internetowej? Chętnie przygotują dla Ciebie kompleksowy
+                projekt graficzny witryny, odpowiadający Twojej wizji. Na
+                bieżąco monitoruję zmieniające się trendy w dziedzinie
+                projektowania graficznego i wykorzystuję je w swoich pracach.
+              </p>
+              <p>
+                Projekty wykonuję w <strong>Figmie</strong> oraz
+                <strong>Adobe Photoshop</strong>.
+              </p>
+            </div>
+            <footer class="mt-6">
+              <a
+                href="#"
+                class="inline-block bg-green hover:bg-greenHover text-white px-6 py-3 transition-all"
+                >Dowiedz się więcej</a
+              >
+            </footer>
+          </div>
+          <picture class="w-full w-full md:w-1/2">
+            <source
+              media="(min-width: 576px)"
+              srcset="./dist/img/design-768w.webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./dist/img/design-992w.webp"
+            />
+            <source
+              media="(min-width: 992px)"
+              srcset="./dist/img/design-1200w.webp"
+            />
+            <source
+              media="(min-width: 1200px)"
+              srcset="./dist/img/design-1920w.webp"
+            />
+            <img
+              width="558"
+              height="500"
+              src="./dist/img/design-576w.webp"
+              alt="człowiek pracuje przy biurku"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="py-12 md:py-24 bg-whiteGreen">
+        <div class="container px-3 mx-auto">
+          <header class="flex flex-col gap-3 md:w-4/6">
+            <span class="uppercase font-bold text-green">Blog</span>
+            <h2 class="font-bold text-3xl md:text-4xl text-customGray">
+              Artykuły, ciekawostki z świata stron internetowych i nie tylko
+            </h2>
+          </header>
+          <ul
+            class="flex flex-col lg:grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12 md:mt-24"
+          >
+            <li class="bg-white drop-shadow-xl border-2 border-greenLight">
+              <article>
+                <a href="#">
+                  <picture
+                    class="w-full h-72 max-h-72 overflow-hidden relative block"
+                  >
+                    <source
+                      media="(min-width: 576px)"
+                      srcset="./dist/img/people-768w.webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./dist/img/people-992w.webp"
+                    />
+                    <source
+                      media="(min-width: 992px)"
+                      srcset="./dist/img/people-1200w.webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./dist/img/people-1920w.webp"
+                    />
+                    <img
+                      width="558"
+                      height="500"
+                      src="./dist/img/people-576w.webp"
+                      alt="człowiek pracuje przy biurku"
+                      loading="lazy"
+                      class="object-cover object-center w-full h-full hover:scale-105 transition-all duration-300"
+                    />
+                  </picture>
+                </a>
+                <header class="p-8 flex flex-col gap-3">
+                  <div class="flex flex-row gap-3">
+                    <a href="#" class="text-green hover:underline">
+                      Programowanie
+                    </a>
+                  </div>
+                  <a href="#" class="hover:underline">
+                    <h3 class="font-bold text-lg">
+                      Semantyczny kod HTML, co to właściwie oznacza i dlaczego
+                      jest ważny?
+                    </h3>
+                  </a>
+                  <p>
+                    Co oznacza semantyczny kod HTML? Dlaczego tak wiele się o
+                    nim mówi i dlaczego jest bardzo ważny? Przeczytaj ten krótki
+                    artykuł aby odkryć odpowiedzi na te i inne pytania.
+                  </p>
+                </header>
+              </article>
+            </li>
+            <li class="bg-white drop-shadow-xl border-2 border-greenLight">
+              <article>
+                <a href="#">
+                  <picture
+                    class="w-full h-72 max-h-72 overflow-hidden relative block"
+                  >
+                    <source
+                      media="(min-width: 576px)"
+                      srcset="./dist/img/colors-768w.webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./dist/img/colors-992w.webp"
+                    />
+                    <source
+                      media="(min-width: 992px)"
+                      srcset="./dist/img/colors-1200w.webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./dist/img/colors-1920w.webp"
+                    />
+                    <img
+                      width="558"
+                      height="500"
+                      src="./dist/img/colors-576w.webp"
+                      alt="człowiek pracuje przy biurku"
+                      loading="lazy"
+                      class="object-cover object-center w-full h-full hover:scale-105 transition-all duration-300"
+                    />
+                  </picture>
+                </a>
+                <header class="p-8 flex flex-col gap-3">
+                  <div class="flex flex-row gap-3">
+                    <a href="#" class="text-green hover:underline">
+                      Programowanie
+                    </a>
+                  </div>
+                  <a href="#" class="hover:underline">
+                    <h3 class="font-bold text-lg">
+                      Semantyczny kod HTML, co to właściwie oznacza i dlaczego
+                      jest ważny?
+                    </h3>
+                  </a>
+                  <p>
+                    Co oznacza semantyczny kod HTML? Dlaczego tak wiele się o
+                    nim mówi i dlaczego jest bardzo ważny? Przeczytaj ten krótki
+                    artykuł aby odkryć odpowiedzi na te i inne pytania.
+                  </p>
+                </header>
+              </article>
+            </li>
+            <li class="bg-white drop-shadow-xl border-2 border-greenLight">
+              <article>
+                <a href="#">
+                  <picture
+                    class="w-full h-72 max-h-72 overflow-hidden relative block"
+                  >
+                    <source
+                      media="(min-width: 576px)"
+                      srcset="./dist/img/desk-768w.webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./dist/img/desk-992w.webp"
+                    />
+                    <source
+                      media="(min-width: 992px)"
+                      srcset="./dist/img/desk-1200w.webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./dist/img/desk-1920w.webp"
+                    />
+                    <img
+                      width="558"
+                      height="500"
+                      src="./dist/img/desk-576w.webp"
+                      alt="człowiek pracuje przy biurku"
+                      loading="lazy"
+                      class="object-cover object-center w-full h-full hover:scale-105 transition-all duration-300"
+                    />
+                  </picture>
+                </a>
+                <header class="p-8 flex flex-col gap-3">
+                  <div class="flex flex-row gap-3">
+                    <a href="#" class="text-green hover:underline">
+                      Programowanie
+                    </a>
+                  </div>
+                  <a href="#" class="hover:underline">
+                    <h3 class="font-bold text-lg">
+                      Semantyczny kod HTML, co to właściwie oznacza i dlaczego
+                      jest ważny?
+                    </h3>
+                  </a>
+                  <p>
+                    Co oznacza semantyczny kod HTML? Dlaczego tak wiele się o
+                    nim mówi i dlaczego jest bardzo ważny? Przeczytaj ten krótki
+                    artykuł aby odkryć odpowiedzi na te i inne pytania.
+                  </p>
+                </header>
+              </article>
+            </li>
+          </ul>
+          <footer class="text-center pt-12">
+            <a
+              href="#"
+              class="inline-block bg-green hover:bg-greenHover text-white px-6 py-3 transition-all"
+            >
+              Przejdź do bloga
+            </a>
+          </footer>
+        </div>
+      </section>
+      <section class="py-12 md:py-24 bg-green">
+        <div class="container px-3 mx-auto">
+          <header
+            class="w-full md:w-2/3 text-center mx-auto text-white flex flex-col gap-5"
+          >
+            <h2 class="text-3xl font-bold">
+              Zbuduj swoją wysokiej klasy stronę internetową ze mną!
+            </h2>
+            <p>Chętnie pomogę zrealizować Twój projekt.</p>
+            <div class="flex flex-row flex-wrap gap-2 justify-center">
+              <a
+                href="#"
+                class="bg-white text-customGray px-6 py-3 transition-all"
+                >Zobacz ofertę</a
+              >
+              <a
+                href="#"
+                class="bg-transparent hover:bg-white text-white hover:text-customGray border-2 border-white px-6 py-3 transition-all"
+                >Skontaktuj się ze mną</a
+              >
+            </div>
+          </header>
+        </div>
+      </section>
+      <footer class="py-20 bg-white">
+        <div
+          class="container mx-auto px-3 flex flex-wrap flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <a
+            href="#"
+            class="grow basis-0 text-lg font-bold text-center md:order-2 hover:underline"
+          >
+            <span class="text-green">Grzegorz</span>
+            <span class="text-gray">Pokorski</span>
+          </a>
+          <nav class="md:order-1 grow basis-0">
+            <ul class="flex flex-col md:flex-row items-center gap-3">
+              <li>
+                <a href="#" class="hover:underline">O mnie</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Oferta</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+          <p class="basis-full text-center text-gray-500 md:order-4">
+            Grzegorz Pokorski © 2022. Doodles by doodleipsum.com. Created by
+            Grzegorz Pokorski.
+          </p>
+          <ul
+            class="flex flex-row grow basis-0 gap-3 text-green md:justify-end md:order-3"
+          >
+            <li>
+              <a
+                href="https://behance.net/grzegorzpokorski"
+                class="hover:text-greenHover"
+              >
+                <span class="sr-only"> behance </span>
+                <span class="fa fab fa-behance" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/grzegorz_pokorski"
+                class="hover:text-greenHover"
+              >
+                <span class="sr-only"> instagram </span>
+                <span class="fa fab fa-instagram" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/grzegorz-pokorski/"
+                class="hover:text-greenHover"
+              >
+                <span class="sr-only"> linkedin </span>
+                <span class="fa fab fa-linkedin-in" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <script type="text/javascript" src="./dist/js/main.js"></script>
+  </body>
+</html>
